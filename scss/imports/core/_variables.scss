@@ -1,0 +1,97 @@
+/*primary colors*/
+$white-cl: #fff;
+$black-cl: #000;
+$yellow-cl:#bea67c;
+
+/*global text color*/
+$text-cl: #222;
+$text-black-cl: #000;
+$text-title-cl:#010101;
+$text-gray-cl:#464646;
+
+
+/*global bg color*/
+$main-bg-cl: #000;
+$black-bg-cl: #000;
+
+// timing transition
+$t: 0.4s;
+$cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
+
+/*font families*/
+$font-stack: "Open Sans", sans-serif;
+$font-main: arial;
+
+/*headings typo*/
+$fz-text: 16px;
+$lh-text: normal;
+
+$fz-text-m: 16px;
+$lh-text-m: normal;
+html,body{
+    /* common */
+    --fz-title2:40px;
+    --fz-btn:14px;
+    --mar-top:100px;
+    --pad-bot:100px;
+    --letterSpacing:5px;
+    
+    --fz-text-desc:16px;
+    /* sec1 +header */
+    --heightHeader:60px;
+    --pdHeader:25px;
+    --pd-num:50px;
+    --fz-title1:80px;
+    --fz-cir:10px;   
+    --fz-num:42px;
+    --ctr-top:15px;
+    --ctr-left:20px;
+
+    /* sec2 */
+    --pd-section:95px;
+    --pd-furL: 100px;
+    --pd-furR: 100px;
+    --mar-text:70px;
+    --mar-product-LR:100px;
+    --mar-title-top:100px;
+    --mar-title-bot:30px;
+    --mar-descr-bot:42px;
+    --mar-pro-top:105px;
+
+    /* sec3 */
+    --mar-title-bot3:55px;
+    --wh-videos:200px;
+    --mar-cap-top:50px;
+
+    /* sec4 */
+    --mar-text-top:40px;
+    --mar-text-bot: 50px;
+    --w-title:40%;
+    --w-text:60%;
+    --fz-btn-watch:16px;
+
+    
+    /* line before title */
+    --dp-line:block;
+}
+
+//============================================================//
+
+/*BOXED LAYOUT*/
+$container-max-width: 1920px;
+$container-width: 1040px; // tùy thuộc vào container của bản thiết kế mà chỉnh sửa cho hợp lý
+
+/*GRID - media queries breakpoints*/
+$xxxs-min:320px;
+$xxs-min: 576px; // CÓ THỂ TÙY CHỈNH
+$xs-min: 768px; // KHÔNG THAY ĐỔI
+$sm-min: 992px; // KHÔNG THAY ĐỔI
+$md-min: 1200px; // KHÔNG THAY ĐỔI
+$lg-min: 1600px; // CÓ THỂ TÙY CHỈNH
+
+$xxxs-max:(xxxs-min - 1);
+$xxs-max: ($xxs-min - 1); // Small Mobile
+$xs-max: ($xs-min - 1); // Mobile
+$sm-max: ($sm-min - 1); // Tablet
+$md-max: ($md-min - 1); // Desktop
+$lg-max: ($lg-min - 1); // Large Desktop

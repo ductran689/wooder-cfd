@@ -1,0 +1,32 @@
+// css footer
+.footer { // k tách file ra footer.scss
+    background: #000;
+    height: 30px;
+    position: relative;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include alignMid;
+        .copyright {
+            color: $white-cl;
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        .logo {
+            width: 100px;
+        }
+        .back-to-top {
+            color: $white-cl;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            a {
+                &:active,
+                &:visited {
+                    color: $white-cl;
+                }
+            }
+        }
+    }
+}

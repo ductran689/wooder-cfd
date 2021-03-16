@@ -1,0 +1,178 @@
+// css components
+/* ===========padding pages======== */
+
+
+/* ==================content============== */
+.content{
+    .title{
+        margin-bottom: var(--mar-title-bot);
+    }
+    .text-desc{
+        margin-bottom: var(--mar-descr-bot);
+    }
+}
+.text-nomar{
+    font-size:var(--fz-text-desc) ;
+    font-family: pr;
+    letter-spacing: .25px;
+    color: $text-gray-cl;
+    margin-top: 0;
+
+}
+
+/* ================title================ */
+.title{
+    font-size: var(--fz-title2);
+    font-family: pb;
+    letter-spacing: var(--letterSpacing);
+    color: $text-black-cl;
+    text-transform: uppercase;
+}
+.title--yellow{
+    color: $yellow-cl;
+    letter-spacing: 2.5px;
+}
+
+/* ==================description text============= */
+.text-desc{
+    font-size:var(--fz-text-desc) ;
+    font-family: pr;
+    letter-spacing: .25px;
+    color: $text-gray-cl;
+    
+}
+
+
+/* =================captions============== */
+.caption{
+    font-size: var(--fz-text-desc);
+    font-family: pr;
+    color: $text-black-cl;
+    position: relative;
+    text-align: center;
+ margin-top: var(--mar-cap-top);
+    &::before{
+        content: "";
+        width: 15%;
+        height: 2px;
+        @include alignMid(row);
+        top: -100%;
+        
+        background: $yellow-cl;
+    }
+}
+
+/* ====================buttons=============== */
+
+.btn{
+    font-size: var(--fz-btn);
+    font-family: pb;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+.btn-line{
+    font-size: var(--fz-btn);
+    font-family: pb;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    &:hover{
+        img{
+            animation: arrowRunL2R;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        &::before{
+            animation: spinAround;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+        }
+        
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 25%;
+        height: 2px;
+        bottom: -25%;
+        background: $yellow-cl;
+    }
+
+    img{
+        padding-left: 10px;
+    }
+
+}
+
+.btn-watch{
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    border: 2px solid $white-cl;
+    padding: 15px 60px;
+    color: $white-cl;
+    position: relative;
+    @include hover2Sides;
+    
+    .icon-play-wh{
+       left: 30px;
+       @include alignMid(col);
+
+    }
+    
+}
+
+.btn-slider2{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    opacity: .3;
+    //position: absolute;
+     
+    position: fixed;
+    bottom: 20%;
+    display: none;
+    &.active{
+        display: block;
+    }
+    &:hover{
+        opacity: .7;
+        img{
+            opacity: .7;
+        }
+    }
+    img{
+        width: 70%;
+        opacity: .3;
+        @include alignMid;
+        
+    }
+    
+}
+/* ===============clips===================== */
+.videos-img{
+    width: 200px;
+    height: 200px;
+    border: 5px solid $white-cl;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,.2);
+-moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,.2);
+box-shadow: 0px 0px 0px 1px rgba(0,0,0,.2);
+transition: .4s;
+object-fit: cover;
+cursor: pointer;
+&:hover{
+    transform: scale(1.1);
+    transition: .4s;
+}
+}
+
+/* =================icon-play=============== */
+.icon-play{
+    @include alignMid;
+    cursor: pointer;
+}
+

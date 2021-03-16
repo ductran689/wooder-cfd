@@ -1,0 +1,213 @@
+@-ms-viewport {
+    width: device-width;
+}
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    //font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+html,
+body {
+    width: 100%;
+    max-width: $container-max-width;
+    margin: auto;
+    @include text($fz-text, $font-main, $lh-text, $text-cl, none);
+    background: $white-cl;
+    behavior: smooth;
+    position: relative;
+    @include customscroll();
+    .pad {
+        padding-top: var(--mar-top);
+    }
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .container-fluid {
+        width: 100%;
+        padding-right: 30px;
+        padding-left: 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .no-gutters {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .no-gap > .col,
+    .no-gap > [class*="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    @media (min-width: $xxs-min) {
+        .container {
+            max-width: 540px;
+        }
+    }
+    @media (min-width: $xs-min) {
+        .container {
+            max-width: 720px;
+        }
+    }
+    @media (min-width: $sm-min) {
+        .container {
+            max-width: 960px;
+        }
+    }
+    @media (min-width: $md-min) {
+        .container {
+            max-width: $container-width;
+        }
+    }
+
+    .mainwrapper {
+        width: 100%;
+        margin: auto;
+    }
+    @include lg {
+        // CSS responsive large desktop
+    }
+    @include md {
+        // CSS responsive desktop
+    }
+    @include sm {
+        // CSS responsive tablet
+    }
+    @include xs {
+        // CSS responsive mobile
+    }
+    @include xxs {
+        // CSS responsive small mobile
+    }
+}
+
+/* ============responsive================= */
+@include md {
+    // CSS responsive desktop
+}
+
+
+@include xs {
+    // CSS responsive mobile
+    header {
+        .container-fluid {
+            .logo {
+                img {
+                    width: 120px;
+                }
+            }
+        }
+    }
+    main {
+        --mar-text-top:10px;
+    --mar-text-bot: 30px;
+        --w-text:80%;
+            --w-title:60%;
+        --fz-title1: 60px;
+        --fz-btn: 10px;
+        --fz-num: 32px;
+        --fz-cir: 8px;
+        --ctr-top: 10px;
+        --ctr-left: 15px;
+        --dp-line: none;
+        --pd-num: 0;
+        --mar-pro-top: 30px;
+        --fz-text-desc: 12px;
+        .sec1 {
+            &__container {
+                .bottom {
+                    .mouse {
+                        &__img {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .sec2 {
+            --mar-top: 50px;
+            --fz-title2: 30px;
+        }
+        .sec3 {
+            --mar-title-bot3: 30px;
+            --fz-title2: 30px;
+            --wh-videos: 150px;
+        }
+    }
+}
+@include xxs {
+    // CSS responsive small mobile
+    main {
+        --mar-title-top: 0px;
+        --mar-title-bot: 10px;
+        --mar-descr-bot: 20px;
+
+        --pd-section: 50px;
+        --fz-title1: 40px;
+        .sec2 {
+            .container {
+                .fur {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &__img {
+                        margin-top: 10px;
+                    }
+                }
+                .decor {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &__img {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .sec3 {
+            --mar-cap-top:10px;
+            .container {
+                .videos{
+                    &-wraper{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        align-items: center;
+                        .videos-item{
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .sec4{
+            --fz-title2:20px;
+            --w-text:80%;
+            --w-title:60%;
+            --fz-btn-watch:12px;
+            &__content{
+                .title--yellow{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

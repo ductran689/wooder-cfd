@@ -1,0 +1,51 @@
+nav{
+    width: 100%;
+    height: calc(100vh - var(--heightHeader));// css navigator (Menu)
+    position: fixed;
+    top: var(--heightHeader);
+   
+    left: 0;
+    background: #222222;
+    z-index: 222;
+    //=====từ từ hiện ra khi active ==================
+
+     opacity: 0;
+     pointer-events: none;
+     @include transition(.5s  cubic-bezier(.64,.26,0,1.08));
+
+    //========phase từ trái qua phải khi active=======================
+    @include transform(translateX(100%));
+
+    &.active{ // class active
+
+    @include transform(translateX(0));
+    //===============================================
+
+    opacity: 1;
+    pointer-events: auto;
+     @include transition(.5 cubic-bezier(.64,.26,0,1.08));
+    }
+   // display: none;
+    ul{
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        li{
+            
+            a{
+                font-size: 20px;
+                font-family: pr;
+                text-transform: uppercase;
+                color: $white-cl;
+                text-decoration: none;
+                display: block;
+                padding: 12px 50vw;
+            }
+            
+        }
+        
+    }
+
+}

@@ -1,0 +1,44 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+}
+
+.btn{
+    font-size: var(--fz-btn);
+    font-family: pb;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 15px;
+}
+
+.btn--arr{
+    color: $text-title-cl;
+    position: relative;
+    &:before{
+        content: "";
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background: $yellow-cl;
+
+    }
+}
+
+/* .title{
+    font-size: var(--fz-title2);
+    text-transform: uppercase;
+    font-family: pb;
+    letter-spacing: 5px;
+    color: $text-title-cl;
+} */
+.text-desc{
+    font-size: var(--fz-text-desc);
+    color: $text-gray-cl;
+    font-family: pr;
+    letter-spacing: .5px;
+}
+
+ 
