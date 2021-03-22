@@ -61,7 +61,7 @@ document.addEventListener("scroll", function () {
   let scrollY = window.pageYOffset;
   console.log(heighSlider);
   console.log(scrollY);
-  if (scrollY > heighSlider - heighHeader) {
+  if (scrollY > 700) {
     header.classList.add("active");
   } else {
     header.classList.remove("active");

@@ -1,7 +1,7 @@
 header {
     position: fixed;
     width: 100vw;
-    z-index: 100;
+    z-index: 900;
     &.active{
         background: #000;
         transition: .3s;
